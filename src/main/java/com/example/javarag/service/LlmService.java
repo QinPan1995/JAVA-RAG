@@ -37,9 +37,9 @@ public class LlmService {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append("[Mock 模式回答] 未检测到 OPENAI_API_KEY，以下是基于检索片段的答案草稿。\n");
+        sb.append("[Mock 模式回答] \n");
         sb.append("问题：").append(question).append("\n");
-        sb.append("参考要点：\n");
+        sb.append("结果：\n");
         for (int i = 0; i < chunks.size(); i++) {
             sb.append(i + 1).append(". ").append(truncate(chunks.get(i).content(), 120)).append("\n");
         }
